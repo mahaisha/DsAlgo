@@ -18,7 +18,7 @@
 			    <version>3.0.0</version>
 	      		<configuration>
 					  <includes>
-							<include>**/TestRunner.java</include>
+							<include>**/MyTestRunner.java</include>
 						</includes>
             	</configuration>
 		</plugin>
@@ -53,7 +53,8 @@
             </executions>
         </plugin>
 	</plugins>
-</build>
+	
+   </build>
 
 	<dependencies>
 	    
