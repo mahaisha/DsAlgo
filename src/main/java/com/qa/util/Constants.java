@@ -16,4 +16,10 @@ public class Constants {
 	public static final String graphRepLink = "https://dsportalapp.herokuapp.com/graph/graph-representations/";
 	public static final String graphPracticeQs = "https://dsportalapp.herokuapp.com/graph/practice";
 
+	public static final String stackUrl="https://dsportalapp.herokuapp.com/stack/";
+	public static final String arrayUrl="https://dsportalapp.herokuapp.com/array/";
+	public static final String homeUrl = "https://dsportalapp.herokuapp.com/home";
+	public static final String dsUrl="https://dsportalapp.herokuapp.com/data-structures-introduction/";
+	public static final String linkedlistUrl="https://dsportalapp.herokuapp.com/linked-list/";
+
 }
