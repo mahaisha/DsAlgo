@@ -10,7 +10,7 @@ Feature: Tree Feature
     
    Scenario: Opening editor from Overview of Trees page
    	Given The user is in the Overview of Trees page after logged in
-   	When The user clicks "Try Here" button
+   	When user clicks try here button
    	Then The user should be redirected to a page having an tryEditor with a Run button to test
 
   #@tag2

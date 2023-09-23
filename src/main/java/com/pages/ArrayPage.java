@@ -6,16 +6,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
+
+import com.qa.util.Constants;
 
 public class ArrayPage {
 	
 	private WebDriver driver;
-	
-	private By arrayGetStart = By.xpath("//a[@href ='array']");
-	private By tryherelink = By.linkText("Try here>>>");
-	private By runbutton = By.xpath("//button[contains(text(),'Run')]");
-	private By arraytitle = By.xpath("//a[@href='applications-of-array']");
+
+	private String appArray = "https://dsportalapp.herokuapp.com/array/applications-of-array/";
+	private By appArraylink = By.xpath("//a[@href='applications-of-array']");
 	private By codeeditor = By.xpath("//div[@class='input'] ");
 	private By answerform = By.id("output");
 	
@@ -24,25 +23,22 @@ public class ArrayPage {
 		this.driver = driver;
 		
 	}
-	public void startArrayHomePage()
+	public void ArrayHome()
 	{
-		driver.get("https://dsportalapp.herokuapp.com/home");
-		driver.findElement(arrayGetStart).click();
-		driver.findElement(arraytitle).click();	   
+		driver.get(Constants.arrayUrl);
+	}
+	public void startApplicationofArrayPage() throws InterruptedException
+	{
+		
+		driver.get(appArray);	   
+		
 	}
 	public String getArrayPageTitle()
 	{
 		return driver.getTitle();
 	}
 	
-	public void clickOnTryHere()
-	{
-		driver.findElement(tryherelink).click();
-	}
-	public void clickOnRunButton()
-	{
-		driver.findElement(runbutton).click();
-	}
+	
 	public void fillCodeEditor(String code) throws InterruptedException
 	{
 		WebElement textarea = driver.findElement(codeeditor);
@@ -52,10 +48,6 @@ public class ArrayPage {
 
 	}
 
-	public boolean isRunButtonExists()
-	{
-		return driver.findElement(runbutton).isDisplayed();
-	}
 	public boolean isAnswerDisplayed() throws InterruptedException
 	{
 		String text =  driver.findElement(answerform).getText();
