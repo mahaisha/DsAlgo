@@ -13,13 +13,13 @@ public class HomePage {
 	private By signOutlink = By.xpath("//a[contains(text(),'Sign out')]");
 	private By tryherelink = By.linkText("Try here>>>");
 	private By runbutton = By.xpath("//button[contains(text(),'Run')]");
-	private By array_GetStart = By.xpath("//a[@href ='array']");
-	private By data_structures_GetStart = By.xpath("//a[@href ='data-structures-introduction']");
-	private By linked_list_GetStart = By.xpath("//a[@href ='linked-list']");
-	private By stack_GetStart = By.xpath("//a[@href ='stack']");
-	private By queue_GetStart = By.xpath("//a[@href ='queue']");
-	private By tree_GetStart = By.xpath("//a[@href ='tree']");
-	private By graph_GetStart = By.xpath("//a[@href ='graph']");
+	private By arrayGetStart = By.xpath("//a[@href ='array']");
+	private By datastructuresGetStart = By.xpath("//a[@href ='data-structures-introduction']");
+	private By linkedlistGetStart = By.xpath("//a[@href ='linked-list']");
+	private By stackGetStart = By.xpath("//a[@href ='stack']");
+	private By queueGetStart = By.xpath("//a[@href ='queue']");
+	private By treeGetStart = By.xpath("//a[@href ='tree']");
+	private By graphGetStart = By.xpath("//a[@href ='graph']");
 	private By tryeditor = By.xpath("//div[@class='input'] ");
 	private By answerform = By.id("output");
 
@@ -49,19 +49,19 @@ public class HomePage {
 	{
 		
 		if(pageName.equalsIgnoreCase("array"))
-			driver.findElement(array_GetStart).click();
+			driver.findElement(arrayGetStart).click();
 		else if(pageName.equalsIgnoreCase("data-structures-introduction"))
-			driver.findElement(data_structures_GetStart).click();
+			driver.findElement(datastructuresGetStart).click();
 		else if(pageName.equalsIgnoreCase("linked-list"))
-			driver.findElement(linked_list_GetStart).click();
+			driver.findElement(linkedlistGetStart).click();
 		else if(pageName.equalsIgnoreCase("stack"))
-			driver.findElement(stack_GetStart).click();
+			driver.findElement(stackGetStart).click();
 		else if(pageName.equalsIgnoreCase("queue"))
-			driver.findElement(queue_GetStart).click();
+			driver.findElement(queueGetStart).click();
 		else if(pageName.equalsIgnoreCase("tree"))
-			driver.findElement(tree_GetStart).click();
+			driver.findElement(treeGetStart).click();
 		else if(pageName.equalsIgnoreCase("graph"))
-			driver.findElement(graph_GetStart).click();
+			driver.findElement(graphGetStart).click();
 		else
 			System.out.println("Page cannot be found-home");
 		
