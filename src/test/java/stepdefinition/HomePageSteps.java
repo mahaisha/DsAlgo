@@ -29,7 +29,6 @@ public class HomePageSteps {
 	public void user_clicks_page_Name(String page_name) {
 		
 		home.getHomePage(page_name);
-	//	System.out.println("Page Name is:"+page_name);
 	}
 	@When ("user clicks {string} page")
 	public void user_clicks_page_Name_Home(String page_name) {
@@ -57,19 +56,25 @@ public class HomePageSteps {
 	@Then("user should be redirected to a page having an tryEditor with a Run button to test")
 	public void user_should_be_redirected_to_a_page_having_an_try_editor_with_a_run_button_to_test() {
 		
-		home.isRunButtonExists();
-		//System.out.println("Application of Array Page Navigation Successfull");
+		Assert.assertTrue(home.istryEditorExists());
+		Assert.assertTrue(home.isRunButtonExists());
 	}
 
 	@Given("The user is in a page having an tryEditor with a Run button to test")
 	public void the_user_is_in_a_page_having_an_try_editor_with_a_run_button_to_test() {
 	
-		home.clickOnTryHere();
-		Assert.assertTrue(home.isRunButtonExists());
-		Assert.assertTrue(home.istryEditorExists());
+		home.getTryEditor();
 	
 	}
-	
-
+	@Given("user is on Ds Algo Portal page with signIn link")
+	public void user_is_on_ds_algo_portal_page_with_sign_in_link() {
+		
+	    home.getDsAlgoPortalUrl();
+	}
+	@Then("The user should be presented with Run result")
+	public void the_user_should_be_presented_with_run_result() throws InterruptedException {
+		
+		Assert.assertTrue(home.isAnswerDisplayed());
+	}
 
 }
