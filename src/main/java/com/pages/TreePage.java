@@ -97,7 +97,6 @@ private WebDriver driver;
 	
 	public void opentryEditor(String pageName)
 	{
-	
 		driver.get(Constants.treeUrl);
 		
 		if(pageName.equalsIgnoreCase("Overview of Trees"))
@@ -106,7 +105,6 @@ private WebDriver driver;
 		}
 		
 		driver.findElement(tryherelink).click();
-
 	}
 
 	public void navigateToTreePage() 
@@ -124,87 +122,9 @@ private WebDriver driver;
 		return driver.getCurrentUrl();
 	}
 	
-//	public void overviewTreeLink()
-//	{
-//		driver.findElement(treeOverviewLink).click();
-//	}
-//	
-//	public void clickTerminologies() 
-//	{
-//		driver.findElement(clickTerminologies).click();
-//	}
-//	
-//	public void clickTypesOfTrees() 
-//	{
-//		driver.findElement(typeOfTrees).click();
-//	}
-//	
-//	public void clickTreeTraversal()
-//	{
-//		driver.findElement(treeTraversal).click();
-//	}
-//	
-//	public void clickTraversalIllustration()
-//	{
-//		driver.findElement(traversalIllustartions).click();
-//	}
-//	
-//	public void clickBinaryTrees() 
-//	{
-//		driver.findElement(binaryTree).click();
-//	}
-//	
-//	
-//	public void clickTypesOfBinaryTrees()
-//	{
-//		driver.findElement(binaryTreeTypes).click();
-//	}
-//	
-//	public void clickPythonImplementation()
-//	{
-//		driver.findElement(pythonImplement).click();
-//	}
-//	
-//	public void clickBinaryTreeTraversal() 
-//	{
-//		System.out.print("hereeeee");
-//		driver.findElement(binaryTreeTraversal).click();
-//	}
-//	
-//	public void clickBinaryTreeImplementation() throws InterruptedException 
-//	{
-//		Thread.sleep(1000);
-//
-//		driver.findElement(binaryTreeImplementation).click();
-//	}
-//	
-//	public void clickBinaryTreeApplication() 
-//	{
-//		driver.findElement(binaryTreeApplication).click();
-//	}
-//	
-//	public void clickBinarySearchTrees() 
-//	{
-//		driver.findElement(binarySearchTree).click();
-//	}
-//	
-//	public void clickBSTImplementation() 
-//	{
-//		driver.findElement(BSTImplementation).click();
-//	}
-//	
 	public void clickPracticeQuestions() 
 	{
 		driver.findElement(practiceQuestions).click();
 	}
-	
-//	public void clickTryHere() {
-//		driver.findElement(tryherelink).click();
-//	}
-	
-//	public boolean isRunButtonExists()
-//	{
-//		return driver.findElement(runbutton).isDisplayed();
-//	}
 	
 }

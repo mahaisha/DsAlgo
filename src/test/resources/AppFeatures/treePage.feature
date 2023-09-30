@@ -27,7 +27,6 @@ Scenario Outline: When click on Topics in Tree page, user is redirected to tryed
 	
 Scenario Outline: The user is able run code in tryEditor for topics in Tree page
 	
-		
 	Given The user is in "Overview of Trees" page having tryEditor with Run button
 	When The user enter valid python code in tryEditor from sheetname "<Sheetname>" and rownumber <RowNumber>
 	And The user clicks on run button
