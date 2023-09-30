@@ -78,7 +78,7 @@ public class HomePage {
 	}
 	public void getDsAlgoPortalUrl()
 	{
-		driver.get(Constants.dsAlgoPortalUrl);
+		driver.get(Constants.dsAlgoLandingUrl);
 	}
 	public void getHomeUrl()
 	{
