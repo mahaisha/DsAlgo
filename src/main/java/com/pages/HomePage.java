@@ -9,7 +9,6 @@ public class HomePage {
 
 	private WebDriver driver;
 
-//	private By homeGetStartedlink = By.xpath("//a[contains(text(),'Get Started')]");
 	private By signOutlink = By.xpath("//a[contains(text(),'Sign out')]");
 	private By tryherelink = By.linkText("Try here>>>");
 	private By runbutton = By.xpath("//button[contains(text(),'Run')]");
@@ -22,6 +21,9 @@ public class HomePage {
 	private By graphGetStart = By.xpath("//a[@href ='graph']");
 	private By tryeditor = By.xpath("//div[@class='input'] ");
 	private By answerform = By.id("output");
+	private By signInlink = By.xpath("//a[contains(text(),'Sign in')]");
+	private By getstarted = By.linkText("Get Started");
+	private By register = By.linkText(" Register ");
 
 
 	public HomePage(WebDriver driver)
@@ -29,6 +31,7 @@ public class HomePage {
 		this.driver = driver;
 		
 	}
+//----------- below functions to click on elements which are commonly used for all modules -------	
 	public void clickOnTryHere()
 	{
 		driver.findElement(tryherelink).click();
@@ -37,13 +40,14 @@ public class HomePage {
 	{
 		driver.findElement(runbutton).click();
 	}
-	public boolean isRunButtonExists()
+	
+	public void clickOnGetStarted()
 	{
-		return driver.findElement(runbutton).isDisplayed();
+		driver.findElement(getstarted).click();
 	}
-	public boolean isSignOutExists()
+	public void clickOnSignIn()
 	{
-		return driver.findElement(signOutlink).isDisplayed();
+		driver.findElement(signInlink).click();
 	}
 	public void startHomePage(String pageName)
 	{
@@ -66,21 +70,27 @@ public class HomePage {
 			System.out.println("Page cannot be found-home");
 		
 	}
+// -------- below funtions for getting page's url and title --------	
+	
+	public void getTryEditor()
+	{
+		driver.get(Constants.tryEditor);
+	}
+	public void getDsAlgoPortalUrl()
+	{
+		driver.get(Constants.dsAlgoPortalUrl);
+	}
+	public void getHomeUrl()
+	{
+		driver.get(Constants.homeUrl);
+	}
 	public String getPageTitle()
 	{
 		return driver.getTitle();
 	}
-	public boolean istryEditorExists()
+	public String getCurrentPageTitle()
 	{
-		return driver.findElement(tryeditor).isDisplayed();
-	}
-	public boolean isAnswerDisplayed() throws InterruptedException
-	{
-		String text =  driver.findElement(answerform).getText();
-		Thread.sleep(1000);
-		if(text.isBlank())
-			return false;
-		return true;
+		return driver.getCurrentUrl();
 	}
 	public void getHomePage(String pageName)
 	{
@@ -101,5 +111,35 @@ public class HomePage {
 		else
 			System.out.println("Page cannot be found-home");
 	}
+// ------------------- below functions are to check whether an element exixts --------------
+	
+	public boolean isSignInExists()
+	{
+		return driver.findElement(signInlink).isDisplayed();
+	}
+	public boolean istryEditorExists()
+	{
+		return driver.findElement(tryeditor).isDisplayed();
+	}
+	public boolean isRunButtonExists()
+	{
+		return driver.findElement(runbutton).isDisplayed();
+	}
+	public boolean isRegisterLinkExists()
+	{
+		return driver.findElement(register).isDisplayed();
+	}
+	public boolean isSignOutExists()
+	{
+		return driver.findElement(signOutlink).isDisplayed();
+	}
+	public boolean isAnswerDisplayed() throws InterruptedException
+	{
+		String text =  driver.findElement(answerform).getText();
+		if(text.isBlank())
+			return false;
+		return true;
+	}
+	
 	
 }
