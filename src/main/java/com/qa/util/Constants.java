@@ -21,5 +21,6 @@ public class Constants {
 	public static final String homeUrl = "https://dsportalapp.herokuapp.com/home";
 	public static final String dsUrl="https://dsportalapp.herokuapp.com/data-structures-introduction/";
 	public static final String linkedlistUrl="https://dsportalapp.herokuapp.com/linked-list/";
+	public static final String dsAlgoLandingUrl = "https://dsportalapp.herokuapp.com/";
 
 }
