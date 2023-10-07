@@ -51,7 +51,6 @@ public class HomePage {
 	}
 	public void startHomePage(String pageName)
 	{
-		
 		if(pageName.equalsIgnoreCase("array"))
 			driver.findElement(arrayGetStart).click();
 		else if(pageName.equalsIgnoreCase("data-structures-introduction"))
