@@ -1,14 +1,14 @@
 
-Feature: Stack feature
+Feature: Graph feature
 
 Background:
 
-  Given  user is on the "stack" after logged in
+  Given  user is on the "graph" after logged in
   
    
-   Scenario Outline: User navigates to different stack page and try codeeditor with valid and invalid code
+   Scenario Outline: User navigates to different graph page and try codeeditor with valid and invalid code
    
-   	When The user clicks "<pageName>" link from main stack page
+   	When The user clicks "<pageName>" link from main graph page
    	Then check the title of the page "<pageName>"
    	
    	When user clicks try here button
@@ -25,9 +25,8 @@ Background:
     Then The user should get error message for invalid code
 		Examples:
   		| pageName            | Sheetname  | RowNumber |
-  		| Operations in Stack | pythonCode | 0 |
- 			| Implementation      | pythonCode | 0 |
-  		| Applications        | pythonCode | 0 |
+  		| Graph | pythonCode | 0 |
+ 			| Graph Representations | pythonCode | 0 |
   
 
 		
