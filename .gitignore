@@ -25,6 +25,8 @@ replay_pid*
 
 allure-results
 test-output
+test output
+test-output-thread
 target
 
 

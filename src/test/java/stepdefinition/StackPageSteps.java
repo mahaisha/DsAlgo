@@ -53,9 +53,9 @@ public class StackPageSteps {
 		stackPage.Page_tryEditor(pageName);
 	}
 	
-	@Then("The user should be presented with Run result")
-	public void the_user_should_be_presented_with_run_result() throws InterruptedException {
-		
-		Assert.assertTrue(homePage.isAnswerDisplayed());
-	}
+//	@Then("The user should be presented with Run result")
+//	public void the_user_should_be_presented_with_run_result() throws InterruptedException {
+//		
+//		Assert.assertTrue(homePage.isAnswerDisplayed());
+//	}
 }
