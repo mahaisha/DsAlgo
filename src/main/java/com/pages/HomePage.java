@@ -1,9 +1,17 @@
 package com.pages;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.qa.util.Constants;
+
+import io.cucumber.java.en.When;
 
 public class HomePage {
 
@@ -77,7 +85,9 @@ public class HomePage {
 	}
 	public void getDsAlgoPortalUrl()
 	{
+
 		driver.get(Constants.dsAlgoLandingUrl);
+
 	}
 	public void getHomeUrl()
 	{
@@ -139,6 +149,15 @@ public class HomePage {
 			return false;
 		return true;
 	}
+//---------------------- to fill codeEditor for inValid pyhthon Code---------------
 	
+	public void fillCodeEditor(String code) throws InterruptedException
+	{
+		WebElement textarea = driver.findElement(tryeditor);
+		Actions action = new Actions(driver);
+		action.sendKeys(textarea, code).build().perform();
+		Thread.sleep(1000);
+
+	}
 	
 }
