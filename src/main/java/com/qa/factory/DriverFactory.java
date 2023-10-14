@@ -35,7 +35,7 @@ public class DriverFactory {
 			//options.addArguments("--no-sandbox");
 			//options.addArguments("--disable-dev-shm-usage");
 			//options.addArguments("--headless");
-			tlDriver.set(new ChromeDriver(options));
+			tlDriver.set(new ChromeDriver());
 
 			
 		}
