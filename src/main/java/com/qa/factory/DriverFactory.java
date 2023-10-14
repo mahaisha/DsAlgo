@@ -30,11 +30,11 @@ public class DriverFactory {
 			//System.setProperty("webdriver.chrome.driver","../../Downloads/chromedriver-mac-x64/chromedriver");
 			//System.out.println("Updating Chrome Version");
 
-			ChromeOptions options = new ChromeOptions();
+			//ChromeOptions options = new ChromeOptions();
 
-			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
-			options.addArguments("--headless");
+			//options.addArguments("--no-sandbox");
+			//options.addArguments("--disable-dev-shm-usage");
+			//options.addArguments("--headless");
 			tlDriver.set(new ChromeDriver(options));
 
 			
