@@ -17,10 +17,10 @@ public class StackPage {
 	private By applications_main = By.linkText("Applications");
 	private By tryeditor = By.xpath("//div[@class='input'] ");
 
-
 	
 	
-	public StackPage(WebDriver driver)
+	
+		public StackPage(WebDriver driver)
 	{
 		this.driver = driver;
 	}
