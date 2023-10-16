@@ -7,11 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
+
 public class StackPage {
 	
 	private WebDriver driver;
 	
-	
+//added new comment to check push to stack_feature branch	
 	private By operationInStack_main = By.xpath("//a[@href='operations-in-stack']");
 	private By implementation_main = By.xpath("//a[@href='implementation']");
 	private By applications_main = By.linkText("Applications");
