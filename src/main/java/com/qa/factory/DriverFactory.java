@@ -2,6 +2,7 @@ package com.qa.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -29,7 +30,14 @@ public class DriverFactory {
 			//System.setProperty("webdriver.chrome.driver","../../Downloads/chromedriver-mac-x64/chromedriver");
 			//System.out.println("Updating Chrome Version");
 
+			//ChromeOptions options = new ChromeOptions();
+
+			//options.addArguments("--no-sandbox");
+			//options.addArguments("--disable-dev-shm-usage");
+			//options.addArguments("--headless");
 			tlDriver.set(new ChromeDriver());
+
+			
 		}
 		else if(browser.equals("firefox"))
 		{

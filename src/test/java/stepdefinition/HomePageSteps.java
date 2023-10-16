@@ -1,8 +1,13 @@
 package stepdefinition;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import com.pages.ExcelReader;
 import com.pages.HomePage;
 //import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
@@ -29,6 +34,7 @@ public class HomePageSteps {
 	public void user_clicks_page_Name(String page_name) {
 		
 		home.getHomePage(page_name);
+		
 	}
 	@When ("user clicks {string} page")
 	public void user_clicks_page_Name_Home(String page_name) {
@@ -67,6 +73,20 @@ public class HomePageSteps {
 		home.getTryEditor();
 	
 	}
+	@When("The user enter inValid pythonCode in tryEditor from sheetname {string} and rownumber {int}")
+	public void the_user_enter_inValid_pythonCode_in_try_editor_from_sheetname_and_rownumber(String sheetName, Integer rownumber)throws IOException, InterruptedException {
+		
+		String filePath = System.getProperty("user.dir")+"/src/test/resources/TestData/AutomationTestData.xlsx";
+		System.out.println(filePath);
+		ExcelReader sheetreader = new ExcelReader();
+
+			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
+			String typeCode = code.get(rownumber).get("inValid_pythonCode");
+			String typeCode2 = code.get(rownumber).get("Column2");
+			System.out.println("PythonExample code:"+typeCode2);
+			home.fillCodeEditor(typeCode);
+		}
+
 	@Given("user is on Ds Algo Portal page with signIn link")
 	public void user_is_on_ds_algo_portal_page_with_sign_in_link() {
 		
