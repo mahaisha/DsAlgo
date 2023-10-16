@@ -77,11 +77,7 @@ public class HomePage {
 	}
 	public void getDsAlgoPortalUrl()
 	{
-//<<<<<<< Updated upstream
 		driver.get(Constants.dsAlgoLandingUrl);
-//=======
-//		driver.get("https://dsportalapp.herokuapp.com/");
-//>>>>>>>
 	}
 	public void getHomeUrl()
 	{
