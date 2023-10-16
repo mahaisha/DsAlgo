@@ -20,11 +20,15 @@ public class Constants {
 	public static final String arrayUrl="https://dsportalapp.herokuapp.com/array/";
 	public static final String homeUrl = "https://dsportalapp.herokuapp.com/home";
 	public static final String dsUrl="https://dsportalapp.herokuapp.com/data-structures-introduction/";
-
-	public static final String linkedlistUrl= "https://dsportalapp.herokuapp.com/linked-list/";
+	public static final String linkedlistUrl="https://dsportalapp.herokuapp.com/linked-list/";
+//<<<<<<< Updated upstream
 	public static final String dsAlgoLandingUrl = "https://dsportalapp.herokuapp.com/";
 	public static final String signInUrl =  "https://dsportalapp.herokuapp.com/login";
 	public static final String registerUrl = "https://dsportalapp.herokuapp.com/register";
 
-
+//=======
+	
+//	public static final String registerUrl = "https://dsportalapp.herokuapp.com/register";
+//	public static final String loginUrl = "https://dsportalapp.herokuapp.com/login";
+//>>>>>>>  changes
 }

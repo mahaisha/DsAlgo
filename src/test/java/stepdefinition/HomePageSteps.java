@@ -65,12 +65,15 @@ public class HomePageSteps {
 
 		Assert.assertTrue(home.istryEditorExists());
 		Assert.assertTrue(home.isRunButtonExists());
+
 	}
 
 	@Given("The user is in a page having an tryEditor with a Run button to test")
 	public void the_user_is_in_a_page_having_an_try_editor_with_a_run_button_to_test() {
+
     
 		home.getTryEditor();
+
 	
 	}
 	@When("The user enter inValid pythonCode in tryEditor from sheetname {string} and rownumber {int}")

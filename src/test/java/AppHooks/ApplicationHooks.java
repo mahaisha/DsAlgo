@@ -32,11 +32,11 @@ public class ApplicationHooks {
 		driverFactory = new DriverFactory();
 		driver = driverFactory.init_driver(browserName);
 	}
-//	
-//	@AfterAll(order=1)
-//	public  static void quitBrowser() {
-//		driver.quit();
-//	}
+	
+	@AfterAll(order=1)
+	public  static void quitBrowser() {
+	//	driver.quit();
+	}
 	
 //	@After(order = 1)
 //	public void tearDown(Scenario scenario) {
