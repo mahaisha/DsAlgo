@@ -23,10 +23,10 @@ public class StackPage {
 //	private By runbutton = By.xpath("//button[contains(text(),'Run')]");
 	private By tryeditor = By.xpath("//div[@class='input'] ");
 
-
 	
 	
-	public StackPage(WebDriver driver)
+	
+		public StackPage(WebDriver driver)
 	{
 		this.driver = driver;
 	}
