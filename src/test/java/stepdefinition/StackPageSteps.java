@@ -46,7 +46,7 @@ public class StackPageSteps {
 		ExcelReader sheetreader = new ExcelReader();
 
 			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
-			String typeCode = code.get(rownumber).get("Column2");
+			String typeCode = code.get(rownumber).get("inValid_pythonCode");
 			stackPage.fillCodeEditor(typeCode);
 		}
 
