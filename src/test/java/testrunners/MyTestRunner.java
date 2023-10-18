@@ -7,6 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 		features= {"src/test/resources/AppFeatures"},
 		glue= {"stepdefinition","AppHooks"},
 		plugin= {"pretty",
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"json:target/cucumber.json", 
 				"rerun:target/rerun.txt"}
 		
