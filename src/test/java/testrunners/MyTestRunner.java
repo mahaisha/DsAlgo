@@ -6,7 +6,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @io.cucumber.testng.CucumberOptions(
 		features= {"src/test/resources/AppFeatures"},
 		glue= {"stepdefinition","AppHooks"},
-		plugin= {"pretty"}
+		plugin= {"pretty",
+				"json:target/cucumber.json", 
+				"rerun:target/rerun.txt"}
 		
 		)
 

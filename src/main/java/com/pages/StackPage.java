@@ -3,8 +3,6 @@ package com.pages;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 
@@ -12,11 +10,9 @@ public class StackPage {
 	
 	private WebDriver driver;
 	
-//added new comment to check push to stack_feature branch	
 	private By operationInStack_main = By.xpath("//a[@href='operations-in-stack']");
 	private By implementation_main = By.xpath("//a[@href='implementation']");
 	private By applications_main = By.linkText("Applications");
-	private By tryeditor = By.xpath("//div[@class='input'] ");
 
 	
 	
@@ -42,12 +38,6 @@ public class StackPage {
 		}
 		else
 			System.out.println("Page cannot be found-stack");
-	}
-	public void fillCodeEditor(String code)
-	{
-		WebElement textarea = driver.findElement(tryeditor);
-		Actions action = new Actions(driver);
-		action.sendKeys(textarea, code).build().perform();
 	}
 	
 	public String getInvalidCodeError()

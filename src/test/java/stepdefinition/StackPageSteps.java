@@ -26,29 +26,19 @@ public class StackPageSteps {
 	    stackPage.navigatethru_mainPage(stack);
 	}
 
-	@When("The user enter valid python code in tryEditor from sheetname {string} and rownumber {int}")
-	public void the_user_enter_valid_python_code_in_try_editor_from_sheetname_and_rownumber(String sheetName, Integer rownumber)throws IOException, InterruptedException {
-		
-		String filePath = System.getProperty("user.dir")+"/src/test/resources/TestData/AutomationTestData.xlsx";
-		System.out.println(filePath);
-		ExcelReader sheetreader = new ExcelReader();
+	
 
-			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
-			String typeCode = code.get(rownumber).get("pythonCode_valid");
-			stackPage.fillCodeEditor(typeCode);
-		}
-
-	@When("The user enter invalid python code in tryEditor from sheetname {string} and rownumber {int}")
-	public void the_user_enter_invalid_python_code_in_try_editor_from_sheetname_and_rownumber(String sheetName, Integer rownumber)throws IOException, InterruptedException {
-		
-		String filePath = System.getProperty("user.dir")+"/src/test/resources/TestData/AutomationTestData.xlsx";
-		System.out.println(filePath);
-		ExcelReader sheetreader = new ExcelReader();
-
-			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
-			String typeCode = code.get(rownumber).get("inValid_pythonCode");
-			stackPage.fillCodeEditor(typeCode);
-		}
+//	@When("The user enter invalid python code in tryEditor from sheetname {string} and rownumber {int}")
+//	public void the_user_enter_invalid_python_code_in_try_editor_from_sheetname_and_rownumber(String sheetName, Integer rownumber)throws IOException, InterruptedException {
+//		
+//		String filePath = System.getProperty("user.dir")+"/src/test/resources/TestData/AutomationTestData.xlsx";
+//		System.out.println(filePath);
+//		ExcelReader sheetreader = new ExcelReader();
+//
+//			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
+//			String typeCode = code.get(rownumber).get("inValid_pythonCode");
+//			stackPage.fillCodeEditor(typeCode);
+//		}
 
 	@Then("The user should get error message for invalid code")
 	public void The_user_should_get_error_message_for_invalid_code()

@@ -18,7 +18,7 @@ Background:
     Then The user should be presented with Run result
     
     Given The user is in a page having an tryEditor with a Run button to test
-    When The user enter invalid python code in tryEditor from sheetname "<Sheetname2>" and rownumber <RowNumber>
+    When The user enter inValid pythonCode in tryEditor from sheetname "<Sheetname2>" and rownumber <RowNumber>
     And  The user clicks on run button
     Then The user should get error message for invalid code
 		Examples:
