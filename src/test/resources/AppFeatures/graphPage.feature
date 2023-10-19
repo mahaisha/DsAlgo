@@ -24,7 +24,7 @@ Background:
     And  The user clicks on run button
     Then The user should get error message for invalid code
 		Examples:
-  		| pageName           	 	| Sheetname1  | RowNumber | Sheetnam2 |
+  		| pageName           	 	| Sheetname1  | RowNumber | Sheetname2 |
   		| Graph 								| pythonCode | 0 |codeInvalid |
  			| Graph Representations | pythonCode | 0 |codeInvalid |
   
