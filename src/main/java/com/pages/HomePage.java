@@ -1,8 +1,5 @@
 package com.pages;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import com.qa.util.Constants;
-
-import io.cucumber.java.en.When;
 
 public class HomePage {
 
@@ -156,8 +151,6 @@ public class HomePage {
 		WebElement textarea = driver.findElement(tryeditor);
 		Actions action = new Actions(driver);
 		action.sendKeys(textarea, code).build().perform();
-		Thread.sleep(1000);
-
 	}
 	
 }
