@@ -17,6 +17,9 @@ public class LoginPage {
 	private By sucessfulLoginMsg = By.xpath("//div[@class='alert alert-primary']");
 	private By errorMsg = By.xpath("//div[@class='alert alert-primary']");
 	private By loginLinkRegister = By.linkText("Login");
+	private By signOutLink = By.linkText("Sign out");						 //("//a[@href='/logout']");
+	private By logOutMsg = By.xpath("//div[@class='alert alert-primary']");
+	
 	String error="";
 	
 	//2.Constructor of the page class:
@@ -47,8 +50,14 @@ public class LoginPage {
 	{
 		driver.findElement(registerLink).click();
 	}
+	public void clickSignOutLink() {
+		driver.findElement(signOutLink).click();
+	}
 	public String getErrorMsg() {
 		return driver.findElement(errorMsg).getText();
+	}
+	public  String SignOutMessage() {
+		return driver.findElement(logOutMsg).getText();
 	}
 	public void clickLoginonRegister() {
 		driver.findElement(loginLinkRegister).click();

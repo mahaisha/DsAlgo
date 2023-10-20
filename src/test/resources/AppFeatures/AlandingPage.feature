@@ -1,4 +1,5 @@
 Feature: Landing Page feature
+Validating landing page. 
 
 Scenario:
   	Given The user opens DS Algo portal link

@@ -141,12 +141,14 @@ public class HomePage {
 			return false;
 		return true;
 	}
-	
+
 	public void fillCodeEditor(String code) throws InterruptedException
 	{
 		WebElement textarea = driver.findElement(tryeditor);
 		Actions action = new Actions(driver);
 		action.sendKeys(textarea, code).build().perform();
+
+		Thread.sleep(1000);
 	}
 	
 }

@@ -21,6 +21,27 @@ public class LoginPageSteps {
 	private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 	private HomePage home = new HomePage(DriverFactory.getDriver());
 	
+	@Given("user is on {string} page")
+	public void user_is_on_page(String expectedTitle) {
+		DriverFactory.getDriver().get(Constants.homeUrl);
+		String actual = home.getPageTitle();
+		System.out.println(actual);
+		Assert.assertTrue(expectedTitle.equalsIgnoreCase(actual));
+	}
+	
+	@When("User clicks Signout button")
+	public void User_clicks_Signout_button() {
+		loginPage.clickSignOutLink();
+	}
+	
+	@Then("User is logged out sucessfully with message {string}")
+	public void User_is_logged_out_sucessfully_with_message(String logOutMsg) {
+		System.out.println(logOutMsg);
+		String actual = loginPage.SignOutMessage();
+		System.out.println(actual);
+		Assert.assertTrue(logOutMsg.equalsIgnoreCase(actual));
+	}
+	
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		DriverFactory.getDriver().get(Constants.signInUrl);

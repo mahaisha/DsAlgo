@@ -23,15 +23,22 @@ When The user clicks Try Here button on Data Structure
 Then user should be redirected to a page having an tryEditor with a Run button to test
 
 Scenario Outline: The user is able run code in tryEditor for Data Structure page
-	
 Given The user is in a page having an tryEditor with a Run button to test
 When The user enter valid python code in tryEditor from sheetname "<Sheetname>" and rownumber <RowNumber>
 And The user clicks on run button
-Then The user should be presented with Run result
- 		
+Then The user should be presented with Run result 		
  Examples:  
       | Sheetname  | RowNumber |
       | pythonCode |         0 |
+
+Scenario Outline:The user run the code in tryEditor with inValid input data for Data Structure page
+		Given The user is in a page having an tryEditor with a Run button to test
+    When The user enter inValid pythonCode in tryEditor from sheetname "<Sheetname>" and rownumber <RowNumber>
+    When The user clicks on run button
+    Then The user should be presented with error message    
+    Examples:
+           | Sheetname  | RowNumber |
+           | codeInvalid|         0 |
 
 #use case 30
 Scenario: user should be able to navigate to practise questions page.

@@ -1,4 +1,6 @@
 Feature: Array Page Navigation through link feature
+
+Validating Array module. 
  
 
     Scenario: User navigated to Arrays in Python page

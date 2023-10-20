@@ -31,6 +31,8 @@ Scenario:
 	Given The user is in the Implementation Of BST page after logged in
 	When The user clicks "Practice Questions" link
  	Then The user should be directed to "practice" Page
+ 	
+ 	
  		
  		
  

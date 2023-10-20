@@ -112,7 +112,7 @@ public class ArrayPage {
 	public boolean isAnswerDisplayed() throws InterruptedException
 	{
 		String text =  driver.findElement(answerform).getText();
-		Thread.sleep(1000);
+//		Thread.sleep(1000);
 		if(text.isBlank())
 			return false;
 		return true;
@@ -121,7 +121,7 @@ public class ArrayPage {
 	
 	public void present_alertMsg() throws InterruptedException
 	{
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 		Alert alert= driver.switchTo().alert();
 		System.out.println(alert.getText());
 		String text = alert.getText();

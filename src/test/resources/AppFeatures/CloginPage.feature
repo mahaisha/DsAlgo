@@ -1,5 +1,6 @@
 Feature: Login page feature
   Registered user should be able to login
+  
 
   Scenario: Validate Register link on login page
     Given user is on login page
@@ -53,4 +54,7 @@ Feature: Login page feature
     And user clicks on Login button
     Then The user should be redirected to Home Page with the message "You are logged in" and with the user name on the top.
     Then user should be redirected to "NumpyNinja" page
+  
+
+ 
  
