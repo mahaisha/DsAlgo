@@ -73,6 +73,17 @@ public class HomePageSteps {
 		home.getTryEditor();
 	
 	}
+	@When("The user enter valid python code in tryEditor from sheetname {string} and rownumber {int}")
+	public void the_user_enter_valid_python_code_in_try_editor_from_sheetname_and_rownumber(String sheetName, Integer rownumber)throws IOException, InterruptedException {
+		
+		String filePath = System.getProperty("user.dir")+"/src/test/resources/TestData/AutomationTestData.xlsx";
+		System.out.println(filePath);
+		ExcelReader sheetreader = new ExcelReader();
+
+			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
+			String typeCode = code.get(rownumber).get("pythonCode_valid");
+			home.fillCodeEditor(typeCode);
+		}
 	@When("The user enter inValid pythonCode in tryEditor from sheetname {string} and rownumber {int}")
 	public void the_user_enter_inValid_pythonCode_in_try_editor_from_sheetname_and_rownumber(String sheetName, Integer rownumber)throws IOException, InterruptedException {
 		
@@ -82,8 +93,6 @@ public class HomePageSteps {
 
 			List<Map<String, String>> code = sheetreader.getData(filePath, sheetName);
 			String typeCode = code.get(rownumber).get("inValid_pythonCode");
-			String typeCode2 = code.get(rownumber).get("Column2");
-			System.out.println("PythonExample code:"+typeCode2);
 			home.fillCodeEditor(typeCode);
 		}
 

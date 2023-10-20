@@ -2,14 +2,17 @@ package AppHooks;
 
 import java.util.Properties;
 
-//import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.factory.DriverFactory;
 import com.qa.util.ConfigReader;
 
+import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Scenario;
 
 
 public class ApplicationHooks {
@@ -32,20 +35,20 @@ public class ApplicationHooks {
 		driverFactory = new DriverFactory();
 		driver = driverFactory.init_driver(browserName);
 	}
-//	
-//	@AfterAll(order=1)
-//	public  static void quitBrowser() {
-//		driver.quit();
-//	}
 	
-//	@After(order = 1)
-//	public void tearDown(Scenario scenario) {
-//		if(scenario.isFailed()) {
-//			//take screenshot:
-//			String screenshotName = scenario.getName().replaceAll(" ","_");
-//			byte [] sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-//			scenario.attach(sourcePath, "image/png", screenshotName);
-//			
-//		}
-//	}
+	@AfterAll(order=1)
+	public  static void quitBrowser() {
+		driver.quit();
+	}
+	
+	@After(order = 1)
+	public void tearDown(Scenario scenario) {
+		if(scenario.isFailed()) {
+			//take screenshot:
+			String screenshotName = scenario.getName().replaceAll(" ","_");
+			byte [] sourcePath = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(sourcePath, "image/png", screenshotName);
+			
+		}
+	}
 }

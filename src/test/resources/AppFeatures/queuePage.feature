@@ -1,14 +1,12 @@
-
-Feature: Stack feature
+Feature: Queue feature
 
 Background:
-
-  Given  user is on the "stack" after logged in
+  Given  user is on the "queue" after logged in
   
    
-   Scenario Outline: User navigates to different stack page and try codeeditor with valid and invalid code
+   Scenario Outline: User Interacts with Code Editor on Queue Pages
    
-   	When The user clicks "<pageName>" link from main stack page
+   	When The user clicks "<pageName>" link from main queue page
    	Then check the title of the page "<pageName>"
    	
    	When user clicks try here button
@@ -24,10 +22,9 @@ Background:
     And  The user clicks on run button
     Then The user should get error message for invalid code
 		Examples:
-  		| pageName            | Sheetname1  | RowNumber |Sheetname2 |
-  		| Operations in Stack | pythonCode | 0 |codeInvalid|
- 			| Implementation      | pythonCode | 0 |codeInvalid|
-  		| Applications        | pythonCode | 0 |codeInvalid|
+  		| pageName            									| Sheetname1  | RowNumber |Sheetname2 |
+  		| Implementation of Queue in Python 		| pythonCode | 0 |codeInvalid |
+ 			| Implementation using collections.deque| pythonCode | 0 |codeInvalid |
+  		| Implementation using array        		| pythonCode | 0 |codeInvalid |
+  		| Queue Operations 											|	pythonCode | 0 |codeInvalid |
   
-
-		
