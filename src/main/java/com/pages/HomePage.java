@@ -2,6 +2,8 @@ package com.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.qa.util.Constants;
 
@@ -140,5 +142,11 @@ public class HomePage {
 		return true;
 	}
 	
+	public void fillCodeEditor(String code) throws InterruptedException
+	{
+		WebElement textarea = driver.findElement(tryeditor);
+		Actions action = new Actions(driver);
+		action.sendKeys(textarea, code).build().perform();
+	}
 	
 }
