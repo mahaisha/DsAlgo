@@ -33,56 +33,33 @@ private WebDriver driver;
 		driver.get(Constants.linkedlistUrl);
 	}
 	
-    public void clickOnIntroduction() {
-		driver.findElement(introductionPg).click();
-	} 
    
 		public String getLinkedPageTitle()
 	{
 		return driver.getTitle();
 		
 			}
-		 public void clickOnCreatingLinked() {
-				driver.findElement(creatingLink).click();
-			} 
-		 public void clickOnTypesOfLink() {
-				driver.findElement(typesLink ).click();
-			} 
-		 public void clickOnImplimentingLink() {
-				driver.findElement(implimentingLink).click();
-			} 
-		 public void clickOnTraversal() {
-				driver.findElement(traversalPg).click();
-			} 
-		 public void clickOnInsertion() {
-				driver.findElement(insertionPg).click();
-			} 
-		 public void clickOnDeletion() {
-				driver.findElement(deletionPg).click();
-			} 
-		 
-		 public void clickOnPracticeQuest() {
-				driver.findElement(practiceQuesPg).click();
-			} 
-		 
-		 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													
-//		 public void fillCodeEditor(String code) throws InterruptedException
-//			{
-//				WebElement textarea = driver.findElement(codeeditor);
-//				Actions action = new Actions(driver);
-//				action.sendKeys(textarea, code).build().perform();
-//				Thread.sleep(1000);
-//			}
-//
-//			public boolean isAnswerDisplayed() throws InterruptedException
-//			{
-//				String text =  driver.findElement(answerform).getText();
-//				Thread.sleep(1000);
-//				if(text.isBlank())
-//					return false;
-//				return true;
-//			}
+		public void navigateInLinkedList(String string){
+		
+		if(string.equals("Introduction")) {
+	    driver.findElement(introductionPg).click();	
+    }else if (string.equals("Creating Linked LIst")) {
+    	driver.findElement(creatingLink).click();
+    }else if (string.equals("Types of Linked List")) {
+    	driver.findElement(typesLink ).click();      
+    }else if (string.equals("Implement Linked List in Python")) {
+    	driver.findElement(implimentingLink).click();        
+    }else if (string.equals("Traversal")) {
+    	driver.findElement(traversalPg).click();     
+    }else if (string.equals("Insertion")) {
+    	driver.findElement(insertionPg).click();     
+    }else if (string.equals("Deletion")) {
+    	driver.findElement(deletionPg).click();
+    }else if (string.equals("Practice Questions")) {
+    	driver.findElement(practiceQuesPg).click();     
+    }}
 
+		 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													
 				public String getCurrentUrl() {
 					return driver.getCurrentUrl();}
 				

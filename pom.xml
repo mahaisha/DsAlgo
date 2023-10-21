@@ -57,9 +57,9 @@
 	
    </build>
 
+	
 	<dependencies>
-	    
-
+	 
 		<!--https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
@@ -138,6 +138,7 @@
 
 		<!--
 		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter -->
+
 		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
 	<dependency>
 	    <groupId>tech.grasshopper</groupId>
@@ -156,6 +157,7 @@
 			<artifactId>log4j-api</artifactId>
 			<version>2.19.0</version>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -190,5 +192,10 @@
 			</dependency>
 
 
-		</dependencies>
+			<dependency>
+				<groupId>Hello-World</groupId>
+				<artifactId>Hello-World</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+	</dependencies>
 </project>
