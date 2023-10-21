@@ -48,38 +48,29 @@ public class ArrayPage {
 		return driver.getTitle();
 	}
 	
-	public void clickOnArraysInPy() {
+	public void navigateInArray(String string) {
+	
+	if(string.equals("Arrays in Python")) {
 		driver.findElement(arrayInPy).click();
-	}
-	public void clickOnArraysUsingList() {
-		driver.findElement(arraysList).click();
-	} 
-	public void clickOnBasicOpLists() {
-		driver.findElement(basicLists).click();
-	} 
-	public void clickOnAppOfArray() {
-		driver.findElement(appArray).click();
-	} 
-
-	public void clickOnPracticeQuest() {
-		driver.findElement(arrayPracQues).click();
-	}	
-	
-	public void clickOnSearchArray() {
-		driver.findElement(searchArray).click();
-	}	
-	public void clickOnMaxConsecutive() {
+    }else if (string.equals("Arrays Using List")) {
+    	driver.findElement(arraysList).click();
+    }else if (string.equals("Basic Operations in Lists")) {
+    	driver.findElement(basicLists).click();    
+    }else if (string.equals("Applications of Array")) {
+    	driver.findElement(appArray).click();   
+    } else if (string.equals("Practice Questions")) {
+    	driver.findElement(arrayPracQues).click();    
+	} else if (string.equals("Search The Array")) {
+		driver.findElement(searchArray).click(); 
+	} else if (string.equals("Max Consecutive Ones")) {
 		driver.findElement(maxConsecutive).click();
-	}		
-
-	public void clickOnFinfEvenNumbers() {
+	} else if (string.equals("Find Numbers with Even Numbers")) {
 		driver.findElement(findEvenNum).click();
-	}			
-			
-	public void clickOnSortedArraySq() {
-		driver.findElement(araaySortedSq ).click();
-	}	
-	
+	} else if (string.equals("Squares of a Sorted Array")) {
+		driver.findElement(araaySortedSq ).click();    
+	}  
+	}
+
     public void clickOnRunButton() {
 	    driver.findElement(runButton).click();
     }	
@@ -94,7 +85,7 @@ public class ArrayPage {
 		WebElement textarea = driver.findElement(codeeditor);
 		Actions action = new Actions(driver);
 		action.sendKeys(textarea, code).build().perform();
-		Thread.sleep(500);
+		
 
 	}
 	public void clearCodeEditor() throws InterruptedException{
@@ -112,25 +103,17 @@ public class ArrayPage {
 	public boolean isAnswerDisplayed() throws InterruptedException
 	{
 		String text =  driver.findElement(answerform).getText();
-//		Thread.sleep(1000);
 		if(text.isBlank())
-			return false;
+		return false;
 		return true;
 	}
 	
 	
 	public void present_alertMsg() throws InterruptedException
 	{
-//		Thread.sleep(5000);
 		Alert alert= driver.switchTo().alert();
 		System.out.println(alert.getText());
 		String text = alert.getText();
-//		if(text.equals("NameError: name 'color' is not defined on line 1")) {
-//			System.out.println("correct alert msg");
-//		}
-//		else {
-//			System.out.println("in-correct alert msg");
-//		}
 		alert.accept();
 		}
 	
