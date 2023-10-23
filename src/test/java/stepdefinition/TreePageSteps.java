@@ -52,6 +52,14 @@ public class TreePageSteps {
 		Assert.assertTrue(url.contains(expectedUrl));
 		}
 	
+//<<<<<<< Updated upstream
+//=======
+
+	@Given("The user is in the Overview of Trees page after logged in")
+	public void the_user_is_in_the_overview_of_trees_page_after_logged_in() {
+    
+//>>>>>>>  changes
+}
 }
 	
 

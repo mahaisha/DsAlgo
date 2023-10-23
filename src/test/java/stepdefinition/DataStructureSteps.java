@@ -1,5 +1,7 @@
 package stepdefinition;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.codehaus.plexus.util.StringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +24,7 @@ public class DataStructureSteps {
 	@Given("User is logged into Ds-Algo website.")
 	public void user_is_logged_into_ds_algo_website() {
 	   driver.get(Constants.homeUrl);
+	   
 	}
 
 	@When("user clicks get started button below the Data Structure Introduction")

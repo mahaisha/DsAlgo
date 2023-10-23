@@ -1,5 +1,7 @@
 package com.pages;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -13,8 +15,23 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.NumberToTextConverter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
 
 public class ExcelReader {
+	
+	public String path;
+	public FileInputStream fis = null;
+	public FileOutputStream fileOut = null;
+	private XSSFWorkbook workbook = null;
+	private XSSFSheet sheet = null;
+	private XSSFRow row = null;
+	private XSSFCell cell = null;
+
 	public List<Map<String, String>> getData(String excelFilePath, String sheetName){
 		Sheet sheet = getSheetByName(excelFilePath, sheetName);
 		return readSheet(sheet);
@@ -143,4 +160,6 @@ public class ExcelReader {
 		}
 		return columnMapdata;
 	}
+	
+
 }

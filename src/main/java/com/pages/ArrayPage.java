@@ -111,7 +111,7 @@ public class ArrayPage {
 	
 	public void present_alertMsg() throws InterruptedException
 	{
-		
+
 		Alert alert= driver.switchTo().alert();
 		System.out.println(alert.getText());
 		String text = alert.getText();
