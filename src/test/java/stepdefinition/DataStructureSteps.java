@@ -29,7 +29,6 @@ public class DataStructureSteps {
 
 	@When("user clicks get started button below the Data Structure Introduction")
 	public void user_clicks_get_started_button_below_the_data_structure_introduction() throws InterruptedException {
-	  Thread.sleep(1000);
 	  dsPage.getStartedDataStructurePage();
 	}
 

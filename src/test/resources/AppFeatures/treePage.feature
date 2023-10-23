@@ -27,7 +27,7 @@ Scenario Outline: When click on Topics in Tree page, user is redirected to tryed
 	|Implementation Of BST|pythonCode 				| 0	|
 	
 
-Scenario:
+Scenario: Practice Question Page
 	Given The user is in the Implementation Of BST page after logged in
 	When The user clicks "Practice Questions" link
  	Then The user should be directed to "practice" Page
