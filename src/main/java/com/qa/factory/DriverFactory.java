@@ -24,6 +24,7 @@ public class DriverFactory {
 	public WebDriver init_driver(String browser)
 	{
 		System.out.println("browser value is:"+browser);
+		browser = System.getenv("BROWSER");
 		if(browser.equals("chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
