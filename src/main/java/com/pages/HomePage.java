@@ -148,7 +148,7 @@ public class HomePage {
 		Actions action = new Actions(driver);
 		action.sendKeys(textarea, code).build().perform();
 
-		Thread.sleep(1000);
+		
 	}
 	
 }
