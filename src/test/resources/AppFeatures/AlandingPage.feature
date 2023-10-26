@@ -1,17 +1,17 @@
 Feature: Landing Page feature
 Validating landing page. 
 
-Scenario:
+Scenario: User is landing on DsAlgo Portal Page
   	Given The user opens DS Algo portal link
   	Then The user should land in DS Algo portal page
   
-Scenario:
+Scenario: User is redirected to Home Page
   	Given The user opens DS Algo portal link
   	When The user clicks the "Get Started" button
   	Then The user should be redirected to homepage
   	
   	
-Scenario:
+Scenario: User see the 7 data structure panes
   	Given The user opens Home Page
   	When The user clicks the "Get Started" button
   	Then The user should see 7 panes with different data structires
